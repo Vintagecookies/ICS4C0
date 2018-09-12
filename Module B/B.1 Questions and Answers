@@ -1,3 +1,8 @@
 Explain the difference between byte, short, int, and long.
   Byte - a group of binary digits such as ones and zeroes
-  Short - 16 bit sighed two integer
+  Short - a data type  that is 16 bit signed two's integer complement
+  Int - a data type that is 32 bit signed two's integer complement
+  Long - a data type that is 64 bit signed two's integer complement
+
+Which type would you use most often for a whole number?
+
