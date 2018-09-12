@@ -1,0 +1,3 @@
+Explain the difference between byte, short, int, and long.
+  Byte - a group of binary digits such as ones and zeroes
+  Short - 16 bit sighed two integer
