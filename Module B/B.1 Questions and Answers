@@ -1,8 +1,27 @@
 Explain the difference between byte, short, int, and long.
-  Byte - a group of binary digits such as ones and zeroes
+  Byte - a group of binary digits such as ones and zeroes. It is 8 bit.
   Short - a data type  that is 16 bit signed two's integer complement
   Int - a data type that is 32 bit signed two's integer complement
   Long - a data type that is 64 bit signed two's integer complement
-
+  
 Which type would you use most often for a whole number?
+  You would use a int to stored a whole number.
 
+When would you use the type long?
+  When there is a really long number and it succeeds the amount that can be handled by a type short.
+
+How is the type float different from the type int?
+  Type float is different from the type int because the float type handles decimal numbers, while a int type is for whole numbers.
+
+How is the type float different from the type double?
+  A float is 32 bit and a double is 64 bit. They both handle decimal numbers instead of whole numbers.
+
+When would you use the type char and when would you use the object String?
+  You would use char when you are storing data in a fixed-length field. You would use the object string when creating a sequence of Unicode characters
+
+What is easy to concatenate (append) strings together?
+
+What is the type boolean used for?
+  A boolean type is a one bit data type, it only has two states which is true(1) or false(0).
+
+How is the Java ‘boolean’ different from the Python ‘boolean’ type?
