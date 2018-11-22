@@ -1,99 +1,93 @@
-package tIcTaCtOe3D;
+package game;
 
-import org.eclipse.swt.*;
-import java.util.*;
-import tIcTaCtOe3D.GaMeBoArD;
-import tIcTaCtOe3D.CoRe;
+public class Logic {
 
-public class GaMeLoGiC {
+	private String checkWinner() {
 
-	public void checkWinner() {
-
-		for (int a = 0; a < 8; a++) {
+		for (int a = 0; a < 48; a++) {
 			switch (a) {
 			
-		if win() {
 			// First Layer //
 			case 0:
-				line = board[0] + board[1] + board[2];
+				line = gameBoard[0] + gameBoard[1] + gameBoard[2];
 				break;
 			case 1:
-				line = board[3] + board[4] + board[5];
+				line = gameBoard[3] + gameBoard[4] + gameBoard[5];
 				break;
 			case 2:
-				line = board[6] + board[7] + board[8];
+				line = gameBoard[6] + gameBoard[7] + gameBoard[8];
 				break;
 			case 3:
-				line = board[0] + board[3] + board[6];
+				line = gameBoard[0] + gameBoard[3] + gameBoard[6];
 				break;
 			case 4:
-				line = board[1] + board[4] + board[7];
+				line = gameBoard[1] + gameBoard[4] + gameBoard[7];
 				break;
 			case 5:
-				line = board[2] + board[5] + board[8];
+				line = gameBoard[2] + gameBoard[5] + gameBoard[8];
 			// First Layer Diagonals //
 				break;
 			case 6:
-				line = board[0] + board[4] + board[8];
+				line = gameBoard[0] + gameBoard[4] + gameBoard[8];
 				break;
 			case 7:
-				line = board[2] + board[4] + board[6];
+				line = gameBoard[2] + gameBoard[4] + gameBoard[6];
 				break;
 			// Second Layer //
 			case 8:
-				line = board[9] + board[10] + board[11];
+				line = gameBoard[9] + gameBoard[10] + gameBoard[11];
 				break;
 			case 9:
-				line = board[12] + board[13] + board[14];
+				line = gameBoard[12] + gameBoard[13] + gameBoard[14];
 				break;
 			case 10:
-				line = board[15] + board[16] + board[17];
+				line = gameBoard[15] + gameBoard[16] + gameBoard[17];
 				break;
 			case 11:
-				line = board[9] + board[12] + board[15];
+				line = gameBoard[9] + gameBoard[12] + gameBoard[15];
 				break;
 			case 12:
-				line = board[10] + board[13] + board[16];
+				line = gameBoard[10] + gameBoard[13] + gameBoard[16];
 				break;
 			case 13:
-				line = board[11] + board[14] + board[17];
+				line = gameBoard[11] + gameBoard[14] + gameBoard[17];
 				break;
 			// Second Layer Diagonals //
 			case 14:
-				line = board[9] + board[13] + board[17];
+				line = gameBoard[9] + gameBoard[13] + gameBoard[17];
 				break;
 			case 15:
-				line = board[11] + board[13] + board[15];
+				line = gameBoard[11] + gameBoard[13] + gameBoard[15];
 				break;
 			// Third layer //
 			case 16:
-				line = board[18] + board[19] + board[20];
+				line = gameBoard[18] + gameBoard[19] + gameBoard[20];
 				break;
 			case 17:
-				line = board[21] + board[22] + board[23];
+				line = gameBoard[21] + gameBoard[22] + gameBoard[23];
 				break;
 			case 18:
-				line = board[24] + board[25] + board[26];
+				line = gameBoard[24] + gameBoard[25] + gameBoard[26];
 				break;
 			case 19:
-				line = board[18] + board[21] + board[24];
+				line = gameBoard[18] + gameBoard[21] + gameBoard[24];
 				break;
 			case 20:
-				line = board[19] + board[22] + board[25];
+				line = gameBoard[19] + gameBoard[22] + gameBoard[25];
 				break;
 			case 21:
-				line = board[20] + board[23] + board[26];
+				line = gameBoard[20] + gameBoard[23] + gameBoard[26];
 				break;
 			// Third Layer Diagonals //
 			case 22:
-				line = board[18] + board[22] + board[26];
+				line = gameBoard[18] + gameBoard[22] + gameBoard[26];
 				break;
 			case 23:
-				line = board[20] + board[22] + board[24];
+				line = gameBoard[20] + gameBoard[22] + gameBoard[24];
 				break;
 			// 3D //
 			case 24:
-				line = board[0] + board[9] + board[18];
+				line = board[0] + gameBoard[9] + board[18];
 				break;
 			case 25:
 				line = board[1] + board[10] + board[19];
@@ -105,7 +99,7 @@ public class GaMeLoGiC {
 				line = board[3] + board[12] + board[21];
 				break;
 			case 28:
-				line = board[4] + board[13] + board[22];
+				line = gameBoard[4] + board[13] + board[22];
 				break;
 			case 29:
 				line = board [5] + board[14] + board[23];
@@ -167,8 +161,28 @@ public class GaMeLoGiC {
 			case 48:
 				line = board[24] + board[13] + board[2];
 				break;
+			}	
+			
+			if (line == "XXX") {
+				return "XXX";
+			} else if (line == "OOO") {
+				return "OOO";
 			}
 		}
+		return "   ";
 	}
+
+	public boolean checkWinnerX( ) {
+		if (checkWinner() == "XXX") {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean checkWinnerO( ) {
+		if (checkWinner() == "OOO") {
+			return true;
+		}
+		return false;
 	}
 }
